@@ -2,12 +2,14 @@
 
 TOKEN_FILE="/var/lib/orches/.op-token"
 VAULT="${HOSTNAME^}"
-OP="podman run --env 'VAULT' --rm --secret op-sa-token,type=env,target=OP_SERVICE_ACCOUNT_TOKEN docker.io/1password/op:2 op"
+OP_PODMAN="podman run --env 'VAULT' --rm --secret op-sa-token,type=env,target=OP_SERVICE_ACCOUNT_TOKEN"
+OP_IMAGE="docker.io/1password/op:2"
+OP="$OP_PODMAN $OP_IMAGE op"
+
 
 # Check if 1Password Service Account Token is set
 check_op_token() {
   if podman secret exists op-sa-token; then
-    echo "token exists"
     return 0
   fi
 
