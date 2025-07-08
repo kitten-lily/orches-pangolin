@@ -23,6 +23,7 @@ UserNS=auto
 [Service]
 Restart=always
 TimeoutStartSec=900
+ExecStartPre=bash -c '. /var/lib/orches/repo/pangolin/traefik_setup.sh'
 
 [Install]
 WantedBy=default.target
