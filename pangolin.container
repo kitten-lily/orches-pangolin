@@ -1,6 +1,5 @@
 [Unit]
 Description=Pangolin Server
-Requires=pangolin-traefik.container
 
 [Container]
 AutoUpdate=registry
