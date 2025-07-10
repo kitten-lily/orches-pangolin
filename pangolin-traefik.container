@@ -15,10 +15,9 @@ Secret=pangolin-domain-name,type=env,target=DOMAIN_NAME
 Volume=/var/lib/orches/repo/pangolin/config/traefik:/etc/traefik:ro,z
 Volume=/var/lib/orches/repo/pangolin/config/letsencrypt:/letsencrypt,z
 Volume=/var/lib/orches/repo/pangolin/config/traefik/logs:/var/log/traefik,z
-AddPort=443:443
+PublishPort=443:443
 Exec=--configFile=/etc/traefik/traefik_config.yml
 UserNS=auto
-X-Version=1
 
 [Service]
 Restart=always
