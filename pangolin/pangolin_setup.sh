@@ -7,4 +7,4 @@ podman_secret Pangolin "Admin Password" pangolin-admin-password
 check_op_token
 mkdir /var/tmp/pangolin
 $OP_PODMAN --user root --volume /var/lib/orches/repo/pangolin:/pangolin:ro,z --volume /var/tmp/pangolin:/pangolin/tmp:z $OP_IMAGE op inject --in-file /pangolin/templates/config.yml \
-  --out-file /pangolin/tmp/config.yml
+  --out-file /pangolin/tmp/config.yml --force
