@@ -1,1 +1,3 @@
 pangolin/config/config.yml
+pangolin/config/letsencrypt
+pangolin/config/traefik/logs
