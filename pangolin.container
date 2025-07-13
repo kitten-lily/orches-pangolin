@@ -7,8 +7,6 @@ ContainerName=pangolin
 Image=docker.io/fosrl/pangolin:1.6.2
 HostName=pangolin
 Network=pangolin.network
-Secret=pangolin-admin-email,type=env,target=USERS_SERVERADMIN_EMAIL
-Secret=pangolin-admin-password,type=env,target=USERS_SERVERADMIN_PASSWORD
 Volume=pangolin-config:/app/config
 Volume=/var/lib/orches/repo/pangolin/config/config.yml:/app/config/config.yml:ro,z
 HealthCmd=curl -f http://localhost:3001/api/v1/
