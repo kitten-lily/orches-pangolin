@@ -8,7 +8,7 @@ Image=docker.io/fosrl/pangolin:1.6.2
 HostName=pangolin
 Network=pangolin.network
 Volume=pangolin-config:/app/config
-Volume=/var/lib/orches/repo/pangolin/config/config.yml:/app/config/config.yml:ro,Z,U
+Volume=Volume=/var/lib/orches/repo/pangolin/config:/var/config:Z,U
 HealthCmd=curl -f http://localhost:3001/api/v1/
 HealthStartPeriod=30s
 HealthInterval=3s
