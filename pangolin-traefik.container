@@ -12,9 +12,9 @@ Network=pangolin.network
 Secret=pangolin-cloudflare-token,type=env,target=CLOUDFLARE_DNS_API_TOKEN
 Secret=pangolin-admin-email,type=env,target=TRAEFIK_CERTIFICATESRESOLVERS_letsencrypt_ACME_EMAIL
 Secret=pangolin-domain-name,type=env,target=DOMAIN_NAME
-Volume=/var/lib/orches/repo/pangolin/config/traefik:/etc/traefik:ro,Z,U
-Volume=/var/lib/orches/repo/pangolin/config/letsencrypt:/letsencrypt,Z,U
-Volume=/var/lib/orches/repo/pangolin/config/traefik/logs:/var/log/traefik,Z,U
+Volume=/var/lib/orches/repo/pangolin/config/traefik:/etc/traefik:ro,z,U
+Volume=/var/lib/orches/repo/pangolin/config/letsencrypt:/letsencrypt,z,U
+Volume=/var/lib/orches/repo/pangolin/config/traefik/logs:/var/log/traefik,z,U
 PublishPort=443:443
 Exec=--configFile=/etc/traefik/traefik_config.yml
 UserNS=auto

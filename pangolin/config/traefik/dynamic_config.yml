@@ -7,7 +7,7 @@ http:
   routers:
     # HTTP to HTTPS redirect router
     main-app-router-redirect:
-      rule: "Host(`${DOMAIN_NAME}`)"
+      rule: 'Host(`{{ env "DOMAIN_NAME" }}`)'
       service: next-service
       entryPoints:
         - web
@@ -16,7 +16,7 @@ http:
 
     # Next.js router (handles everything except API and WebSocket paths)
     next-router:
-      rule: "Host(`${DOMAIN_NAME}`) && !PathPrefix(`/api/v1`)"
+      rule: 'Host(`{{ env "DOMAIN_NAME" }}`) && !PathPrefix(`/api/v1`)'
       service: next-service
       entryPoints:
         - websecure
@@ -25,7 +25,7 @@ http:
 
     # API router (handles /api/v1 paths)
     api-router:
-      rule: "Host(`${DOMAIN_NAME}`) && PathPrefix(`/api/v1`)"
+      rule: 'Host(`{{ env "DOMAIN_NAME" }}`) && PathPrefix(`/api/v1`)'
       service: api-service
       entryPoints:
         - websecure
@@ -34,7 +34,7 @@ http:
 
     # WebSocket router
     ws-router:
-      rule: "Host(`${DOMAIN_NAME}`)"
+      rule: 'Host(`{{ env "DOMAIN_NAME" }}`)'
       service: api-service
       entryPoints:
         - websecure
