@@ -11,7 +11,6 @@ HostName=gerbil
 Network=pangolin.network
 Volume=/var/lib/orches/repo/pangolin/config:/var/config:z,U
 Exec=--reachableAt=http://gerbil:3003 --generateAndSaveKeyTo=/var/config/key --remoteConfig=http://pangolin:3001/api/v1/gerbil/get-config --reportBandwidthTo=http://pangolin:3001/api/v1/gerbil/receive-bandwidth
-UserNS=auto
 PublishPort=51820:51820/udp
 AddCapability=NET_ADMIN
 AddCapability=SYS_MODULE

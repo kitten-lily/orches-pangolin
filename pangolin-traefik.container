@@ -17,7 +17,6 @@ Volume=/var/lib/orches/repo/pangolin/config/letsencrypt:/letsencrypt:z,U
 Volume=/var/lib/orches/repo/pangolin/config/traefik/logs:/var/log/traefik:z,U
 PublishPort=443:443
 Exec=--configFile=/etc/traefik/traefik_config.yml
-UserNS=auto
 
 [Service]
 Restart=always
