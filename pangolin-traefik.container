@@ -6,7 +6,7 @@ After=pangolin.container
 [Container]
 AutoUpdate=registry
 ContainerName=pangolin-traefik
-Image=docker.io/traefik:v3.4.1
+Image=docker.io/traefik:v3.5.0
 Pod=pangolin.pod
 Secret=pangolin-cloudflare-token,type=env,target=CLOUDFLARE_DNS_API_TOKEN
 Secret=pangolin-admin-email,type=env,target=TRAEFIK_CERTIFICATESRESOLVERS_letsencrypt_ACME_EMAIL
