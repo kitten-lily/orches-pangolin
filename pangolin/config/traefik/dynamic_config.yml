@@ -45,9 +45,9 @@ http:
     next-service:
       loadBalancer:
         servers:
-          - url: "http://pangolin:3002" # Next.js server
+          - url: "http://localhost:3002" # Next.js server
 
     api-service:
       loadBalancer:
         servers:
-          - url: "http://pangolin:3000" # API/WebSocket server
+          - url: "http://localhost:3000" # API/WebSocket server

@@ -1,0 +1,11 @@
+[Pod]
+PodName=pangolin
+HostName=pangolin
+PublishPort=443:443
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Restart=always
+TimeoutStartSec=900
