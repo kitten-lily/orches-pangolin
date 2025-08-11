@@ -3,7 +3,7 @@ PodName=pangolin
 HostName=pangolin
 PublishPort=443:443
 PublishPort=51820:51820/udp
-PublishPort=51820:51820/udp
+PublishPort=21820:21820/udp
 
 [Install]
 WantedBy=default.target
