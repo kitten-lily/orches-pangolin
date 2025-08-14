@@ -1,7 +1,9 @@
 [Unit]
 Description=Traefik Reverse Proxy for Pangolin
 Requires=pangolin.container
+Requires=pangolin-gerbil.container
 After=pangolin.container
+After=pangolin-gerbil.container
 
 [Container]
 AutoUpdate=registry
