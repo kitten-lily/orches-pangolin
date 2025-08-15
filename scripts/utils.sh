@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-TOKEN_FILE="/var/lib/orches/.op-token"
 VAULT="${HOSTNAME^}"
 OP_PODMAN="podman run --env VAULT=${HOSTNAME^} --rm --secret op-sa-token,type=env,target=OP_SERVICE_ACCOUNT_TOKEN"
 OP_IMAGE="docker.io/1password/op:2"
