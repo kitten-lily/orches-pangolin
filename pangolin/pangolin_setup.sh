@@ -2,7 +2,7 @@
 
 . /var/lib/orches/repo/scripts/utils.sh
 
-TEMPLATE_PATH="/var/lib/orches/repo/pangolin/templates"
+TEMPLATE_PATH="/var/lib/orches/repo/pangolin/templates/config.yml"
 CONFIG_PATH="/var/lib/orches/repo/pangolin/config"
 
 podman_secret Pangolin "Admin E-mail" pangolin-admin-email
