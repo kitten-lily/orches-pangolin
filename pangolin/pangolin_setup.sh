@@ -9,7 +9,7 @@ podman_secret Pangolin "Admin E-mail" pangolin-admin-email
 podman_secret Pangolin "Admin Password" pangolin-admin-password
 
 if [ ! -f "/var/lib/orches/repo/pangolin/config/config.yml" ]; then
-    $OP_PODMAN --user root --volume $TEMPLATE_PATH:/template.yml \
-    --volume $CONFIG_PATH:/config \
+    $OP_PODMAN --user root --volume $TEMPLATE_PATH:/template.yml:z \
+    --volume $CONFIG_PATH:/config:z \
     $OP_IMAGE op inject --in-file /template.yml  --out-file /config/config.yml --force
 fi
