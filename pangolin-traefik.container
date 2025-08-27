@@ -8,7 +8,7 @@ After=pangolin-gerbil.container
 [Container]
 AutoUpdate=registry
 ContainerName=pangolin-traefik
-Image=docker.io/traefik:v3.4.1
+Image=docker.io/traefik:v3.5.1
 HostName=traefik
 Network=pangolin-gerbil.container
 Secret=pangolin-cloudflare-token,type=env,target=CLOUDFLARE_DNS_API_TOKEN
