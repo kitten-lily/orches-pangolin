@@ -6,7 +6,7 @@ After=pangolin.container
 [Container]
 AutoUpdate=registry
 ContainerName=pangolin-gerbil
-Image=docker.io/fosrl/gerbil:1.1.0
+Image=docker.io/fosrl/gerbil:1.2.1
 HostName=gerbil
 Network=pangolin.network
 Volume=/var/lib/orches/repo/pangolin/config:/var/config:z,U
