@@ -23,7 +23,7 @@ certificatesResolvers:
   letsencrypt:
     acme:
       dnsChallenge:
-        provider: "cloudflare"
+        provider: "porkbun"
       storage: "/letsencrypt/acme.json"
       caServer: "https://acme-v02.api.letsencrypt.org/directory"
 

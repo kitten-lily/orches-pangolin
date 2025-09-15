@@ -11,7 +11,8 @@ ContainerName=pangolin-traefik
 Image=docker.io/traefik:v3.5.2
 HostName=traefik
 Network=pangolin-gerbil.container
-Secret=pangolin-cloudflare-token,type=env,target=CLOUDFLARE_DNS_API_TOKEN
+Secret=pangolin-porkbun-api-key,type=env,target=PORKBUN_API_KEY
+Secret=pangolin-porkbun-secret-key,type=env,target=PORKBUN_SECRET_API_KEY
 Secret=pangolin-admin-email,type=env,target=TRAEFIK_CERTIFICATESRESOLVERS_letsencrypt_ACME_EMAIL
 Secret=pangolin-domain-name,type=env,target=DOMAIN_NAME
 Volume=/var/lib/orches/repo/pangolin/config/traefik:/etc/traefik:ro,z,U
