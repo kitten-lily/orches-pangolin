@@ -4,7 +4,7 @@ Description=Pangolin Server
 [Container]
 AutoUpdate=registry
 ContainerName=pangolin
-Image=docker.io/fosrl/pangolin:1.10.0
+Image=docker.io/fosrl/pangolin:1.10.1
 HostName=pangolin
 Network=pangolin.network
 Volume=/var/lib/orches/repo/pangolin/config:/app/config:z,U
