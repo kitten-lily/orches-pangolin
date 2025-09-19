@@ -27,7 +27,7 @@ server:
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
     headers: ["X-CSRF-Token", "Content-Type"]
     credentials: false
-  secret: "supersecret"
+  secret: "{{ op://${VAULT}/Pangolin/Server Secret }}"
 
 traefik:
   cert_resolver: "letsencrypt"
