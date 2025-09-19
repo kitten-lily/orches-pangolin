@@ -49,7 +49,7 @@ rate_limits:
 
 email:
   smtp_host: "{{ op://${VAULT}/Pangolin/E-mail/SMTP Host }}"
-  smtp_port: "{{ op://${VAULT}/Pangolin/E-mail/SMTP Port }}"
+  smtp_port: {{ op://${VAULT}/Pangolin/E-mail/SMTP Port }}
   smtp_user: "{{ op://${VAULT}/Pangolin/E-mail/SMTP User }}"
   smtp_pass: "{{ op://${VAULT}/Pangolin/E-mail/SMTP Password }}"
 
